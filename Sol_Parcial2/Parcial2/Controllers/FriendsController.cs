@@ -17,12 +17,14 @@ namespace Parcial2.Controllers
         private DataContext db = new DataContext();
 
         // GET: api/Friends
+        [Authorize]
         public IQueryable<Friend> GetFriends()
         {
             return db.Friends;
         }
 
         // GET: api/Friends/5
+        [Authorize]
         [ResponseType(typeof(Friend))]
         public IHttpActionResult GetFriend(int id)
         {
@@ -36,6 +38,7 @@ namespace Parcial2.Controllers
         }
 
         // PUT: api/Friends/5
+        [Authorize]
         [ResponseType(typeof(void))]
         public IHttpActionResult PutFriend(int id, Friend friend)
         {
@@ -71,6 +74,7 @@ namespace Parcial2.Controllers
         }
 
         // POST: api/Friends
+        [Authorize]
         [ResponseType(typeof(Friend))]
         public IHttpActionResult PostFriend(Friend friend)
         {
@@ -86,6 +90,7 @@ namespace Parcial2.Controllers
         }
 
         // DELETE: api/Friends/5
+        [Authorize]
         [ResponseType(typeof(Friend))]
         public IHttpActionResult DeleteFriend(int id)
         {
