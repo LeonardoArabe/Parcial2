@@ -16,8 +16,5 @@ namespace Parcial2.Models
         public string NickName { get; set; }
         [DataType(DataType.Date)]
         public DateTime Birthday { get; set; }
-
-
-
     }
 }
